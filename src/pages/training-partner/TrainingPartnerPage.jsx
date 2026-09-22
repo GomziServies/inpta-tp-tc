@@ -505,13 +505,6 @@ const TrainingPartnerPage = () => {
                       <div className="small text-secondary">Manage local day-to-day batch schedules, student doubts, and attendance.</div>
                     </div>
                   </li>
-                  <li className="role-list-item">
-                    <i className="fas fa-arrow-right text-primary mt-1"></i>
-                    <div>
-                      <strong>Local Marketing Budget (~₹2k/day)</strong>
-                      <div className="small text-secondary">Meta/Google ads budget directly deducted from generated revenue.</div>
-                    </div>
-                  </li>
                 </ul>
               </div>
             </div>
@@ -553,24 +546,13 @@ const TrainingPartnerPage = () => {
             ))}
           </div>
 
-          <div className="card mt-4 border-0 shadow-sm bg-white p-4 rounded-4 text-start">
-            <h5 className="fw-bold text-dark mb-2">
-              <i className="fas fa-coins text-warning me-2"></i> Recommended Local Marketing Expense
-            </h5>
-            <p className="text-secondary mb-2">
-              Marketing expenses such as <strong>Meta Ads, Google Ads, and Influencer Marketing</strong>, estimated at around <strong>₹2,000 per day</strong>, will be applicable as required to drive high batch enrollments.
-            </p>
-            <div className="alert alert-info py-2 mb-0 small">
-              <i className="fas fa-info-circle me-1"></i> All such marketing costs are deducted directly from the generated batch revenue for zero partner cash-flow stress.
-            </div>
-          </div>
         </div>
       </section>
 
       {/* Faculty Development & Backend Operations */}
       <section className="py-5 bg-white">
         <div className="container py-4">
-          <div className="row g-5 align-items-center text-start">
+          <div className="row g-5 align-items-start text-start">
             <div className="col-lg-6">
               <span className="tp-section-tag">Faculty Development</span>
               <h2 className="tp-section-title">Train-the-Trainer Program</h2>
@@ -652,7 +634,7 @@ const TrainingPartnerPage = () => {
                   <li><i className="fas fa-check text-success"></i> Complete 6-Month Diploma Curriculum</li>
                   <li><i className="fas fa-check text-success"></i> Train-the-Trainer Faculty Certification</li>
                   <li><i className="fas fa-check text-success"></i> Central Admissions & Exam Portal</li>
-                  <li><i className="fas fa-check text-success"></i> 70:30 Profit Sharing Model</li>
+                  <li><i className="fas fa-check text-success"></i> 70:30 Revenue Sharing Model</li>
                   <li><i className="fas fa-check text-success"></i> Investment Recovery Protection Model</li>
                 </ul>
                 <a
@@ -677,7 +659,7 @@ const TrainingPartnerPage = () => {
                   <li><i className="fas fa-check text-success"></i> Complete Diploma + Advanced Certifications</li>
                   <li><i className="fas fa-check text-success"></i> Priority Marketing & Lead Pipeline</li>
                   <li><i className="fas fa-check text-success"></i> Multi-Batch Scalability & Sunday Cohorts</li>
-                  <li><i className="fas fa-check text-success"></i> 70:30 Profit Sharing on All Batches</li>
+                  <li><i className="fas fa-check text-success"></i> 70:30 Revenue Sharing on All Batches</li>
                   <li><i className="fas fa-check text-success"></i> Maximum Investment Protection Terms</li>
                 </ul>
                 <a

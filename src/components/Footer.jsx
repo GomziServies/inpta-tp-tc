@@ -55,7 +55,7 @@ function Footer() {
               <div className="d-flex pt-2">
                 <Link
                   className="btn btn-outline-light btn-social"
-                  to="https://api.whatsapp.com/send?phone=916354051487&text=Hello%2C%20I%20want%20to%20know%20more%20about%20INPTA%20accreditation%20service."
+                  to="https://api.whatsapp.com/send?phone=918866842520&text=Hello%2C%20I%20want%20to%20know%20more%20about%20INPTA%20accreditation%20service."
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="WhatsApp"

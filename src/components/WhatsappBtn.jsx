@@ -12,7 +12,7 @@ function sendToWhatsApp(text, option) {
     }
   }
 
-  let url = `https://api.whatsapp.com/send?phone=+916354051487&text=${encodeURIComponent(
+  let url = `https://api.whatsapp.com/send?phone=+918866842520&text=${encodeURIComponent(
     text
   )}`;
   window.open(url, "_blank");
