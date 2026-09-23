@@ -1,0 +1,1011 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap");
+
+.inpta-home {
+  --blue: oklch(47% 0.19 260);
+  --blue-deep: oklch(32% 0.12 262);
+  --blue-soft: oklch(96.5% 0.018 258);
+  --orange: oklch(70% 0.19 45);
+  --orange-hover: oklch(64% 0.2 42);
+  --orange-soft: oklch(96.5% 0.03 60);
+  --green: oklch(60% 0.16 150);
+  --green-hover: oklch(53% 0.16 150);
+  --green-soft: oklch(96.5% 0.03 150);
+  --fg: oklch(20% 0.03 260);
+  --muted: oklch(50% 0.025 258);
+  --surface: oklch(98.5% 0.004 250);
+  --border: oklch(92% 0.008 255);
+  --radius-lg: 1.5rem;
+  --radius-md: 1rem;
+  --shadow-soft: 0 1px 2px oklch(20% 0.03 260 / 0.04),
+    0 8px 24px -12px oklch(20% 0.03 260 / 0.12);
+  --shadow-card: 0 1px 3px oklch(20% 0.03 260 / 0.05),
+    0 16px 40px -20px oklch(20% 0.03 260 / 0.18);
+  --shadow-lift: 0 2px 6px oklch(20% 0.03 260 / 0.06),
+    0 28px 60px -24px oklch(20% 0.03 260 / 0.26);
+  --shadow-orange: 0 10px 28px -10px oklch(70% 0.19 45 / 0.55);
+
+  font-family: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  color: var(--fg);
+  background: #fff;
+}
+
+.inpta-home h1,
+.inpta-home h2,
+.inpta-home h3,
+.inpta-home h4,
+.inpta-home h5 {
+  font-family: "Plus Jakarta Sans", "Manrope", ui-sans-serif, system-ui,
+    sans-serif;
+  color: var(--fg);
+}
+.inpta-home a {
+  text-decoration: none;
+}
+
+.inpta-container {
+  width: 100%;
+  max-width: 80rem;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+@media (min-width: 640px) {
+  .inpta-container {
+    padding-inline: 2rem;
+  }
+}
+@media (min-width: 1024px) {
+  .inpta-container {
+    padding-inline: 2.5rem;
+  }
+}
+
+.inpta-section {
+  padding-block: 3rem;
+}
+@media (min-width: 1024px) {
+  .inpta-section {
+    padding-block: 4.5rem;
+  }
+}
+.inpta-section--alt {
+  background: var(--surface);
+}
+.inpta-home [id] {
+  scroll-margin-top: 96px;
+}
+
+.inpta-section__head {
+  max-width: 46rem;
+  margin: 0 auto 2.75rem;
+  text-align: center;
+}
+.inpta-section__head--left {
+  margin: 0 0 2.75rem;
+  text-align: left;
+  max-width: 46rem;
+}
+.inpta-section__head h2 {
+  margin-top: 1rem;
+  font-size: clamp(1.6rem, 3vw, 2.6rem);
+  font-weight: 700;
+  line-height: 1.15;
+}
+.inpta-section__head p {
+  margin-top: 0.9rem;
+  color: var(--muted);
+  font-size: 1.02rem;
+  line-height: 1.6;
+}
+
+/* Eyebrow badge with leading dot, tone-colored */
+.inpta-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 999px;
+  padding: 0.3rem 0.8rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.inpta-eyebrow::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: currentColor;
+}
+.inpta-eyebrow--blue {
+  background: var(--blue-soft);
+  color: var(--blue);
+}
+.inpta-eyebrow--green {
+  background: var(--green-soft);
+  color: var(--green);
+}
+.inpta-eyebrow--orange {
+  background: var(--orange-soft);
+  color: var(--orange-hover);
+}
+
+/* Buttons */
+.inpta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  height: 3rem;
+  min-width: 11rem;
+  padding: 0 1.75rem;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 0.95rem;
+  border: 1.5px solid transparent;
+  transition: transform 0.2s ease, box-shadow 0.2s ease,
+    background-color 0.2s ease, border-color 0.2s ease;
+  white-space: nowrap;
+}
+@media (max-width: 480px) {
+  .inpta-btn {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+}
+.inpta-btn:hover {
+  transform: translateY(-2px);
+}
+.inpta-btn--solid {
+  background: var(--orange);
+  color: #fff;
+  box-shadow: var(--shadow-orange);
+}
+.inpta-btn--solid:hover {
+  background: var(--orange-hover);
+  color: #fff;
+}
+.inpta-btn--outline {
+  background: #fff;
+  color: var(--fg);
+  border-color: oklch(20% 0.03 260 / 0.14);
+  box-shadow: var(--shadow-soft);
+}
+.inpta-btn--outline:hover {
+  background: var(--blue-soft);
+  color: var(--blue);
+  border-color: var(--blue);
+}
+
+/* ===== Hero ===== */
+.inpta-hero {
+  position: relative;
+  overflow: hidden;
+  background-image: radial-gradient(
+    oklch(47% 0.19 260 / 0.1) 1px,
+    transparent 1px
+  );
+  background-size: 22px 22px;
+}
+.inpta-hero__grid {
+  display: grid;
+  gap: 3rem;
+  align-items: center;
+  padding-block: 3rem 3.5rem;
+}
+@media (min-width: 1024px) {
+  .inpta-hero__grid {
+    grid-template-columns: 1.05fr 1fr;
+    padding-block: 5rem 6rem;
+  }
+}
+.inpta-hero h1 {
+  margin-top: 1.4rem;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+.inpta-hero h1 .inpta-hero__brand {
+  display: block;
+  color: var(--blue);
+  font-size: clamp(2.6rem, 6vw, 4.5rem);
+}
+.inpta-hero h1 .inpta-hero__headline {
+  display: block;
+  margin-top: 0.6rem;
+  color: var(--fg);
+  font-size: clamp(1.3rem, 2.6vw, 2.1rem);
+  font-weight: 700;
+  line-height: 1.15;
+}
+.inpta-hero p {
+  margin-top: 1.5rem;
+  max-width: 34rem;
+  color: var(--muted);
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+.inpta-hero__actions {
+  margin-top: 1.9rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+.inpta-hero__trust {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.4rem;
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+.inpta-hero__trust span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+.inpta-hero__trust svg {
+  color: var(--green);
+}
+
+.inpta-hero__visual {
+  position: relative;
+}
+.inpta-hero__frame {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.75rem;
+  aspect-ratio: 4 / 5;
+  box-shadow: var(--shadow-lift);
+  background: var(--surface);
+}
+.inpta-hero__frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.inpta-asset-hint {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 2;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(6px);
+  border-radius: 999px;
+  padding: 0.2rem 0.6rem;
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+.inpta-hero__floatcard {
+  position: absolute;
+  left: 1rem;
+  right: 1rem;
+  bottom: -1.5rem;
+  background: rgba(255, 255, 255, 0.97);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lift);
+  padding: 1rem;
+  backdrop-filter: blur(6px);
+}
+@media (min-width: 640px) {
+  .inpta-hero__floatcard {
+    left: auto;
+    right: 1.5rem;
+    width: 18rem;
+  }
+}
+.inpta-hero__floatcard-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+.inpta-hero__floatcard-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 0.7rem;
+  background: var(--green-soft);
+  color: var(--green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.inpta-hero__floatcard h5 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+.inpta-hero__floatcard p {
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin: 0;
+}
+.inpta-hero__floatcard-bar {
+  margin-top: 0.75rem;
+  display: flex;
+  gap: 0.35rem;
+}
+.inpta-hero__floatcard-bar span {
+  flex: 1;
+  height: 6px;
+  border-radius: 999px;
+}
+
+/* Offerings strip under hero */
+.inpta-offerings-strip {
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+}
+.inpta-offerings-strip__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+@media (min-width: 640px) {
+  .inpta-offerings-strip__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .inpta-offerings-strip__list {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+.inpta-offerings-strip__item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.25rem 1rem;
+  border-right: 1px solid transparent;
+}
+@media (min-width: 1024px) {
+  .inpta-offerings-strip__item {
+    justify-content: center;
+    border-right: 1px solid var(--border);
+  }
+  .inpta-offerings-strip__item:last-child {
+    border-right: none;
+  }
+}
+.inpta-offerings-strip__icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 0.7rem;
+  background: #fff;
+  color: var(--blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-soft);
+  flex-shrink: 0;
+}
+.inpta-offerings-strip__item span:last-child {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+/* Stat cards */
+.inpta-stat-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+@media (min-width: 1024px) {
+  .inpta-stat-grid {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.25rem;
+  }
+}
+.inpta-stat-card {
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+  padding: 1.5rem;
+}
+.inpta-stat-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 4px;
+  background: var(--tone-color, var(--blue));
+}
+.inpta-stat-card__value {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--tone-color, var(--blue));
+}
+.inpta-stat-card__label {
+  margin-top: 0.4rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--fg);
+  opacity: 0.85;
+}
+.inpta-stat-card__badge {
+  margin-top: 0.9rem;
+  display: inline-block;
+  border-radius: 999px;
+  padding: 0.12rem 0.55rem;
+  font-size: 0.62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+  background: var(--blue-soft);
+}
+.inpta-tone-blue {
+  --tone-color: var(--blue);
+}
+.inpta-tone-orange {
+  --tone-color: var(--orange);
+}
+.inpta-tone-green {
+  --tone-color: var(--green);
+}
+
+/* Career profile / testimonial cards */
+.inpta-testimonial-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+@media (min-width: 768px) {
+  .inpta-testimonial-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.inpta-testimonial-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  padding: 1.75rem;
+}
+.inpta-testimonial-card__ribbon {
+  display: inline-block;
+  margin-bottom: 1rem;
+  background: var(--orange-soft);
+  color: var(--orange-hover);
+  font-size: 0.68rem;
+  font-weight: 700;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+}
+.inpta-testimonial-card blockquote {
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--fg);
+  margin: 0;
+}
+.inpta-testimonial-card__income {
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  background: var(--surface);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  font-size: 0.78rem;
+}
+.inpta-testimonial-card__income dt {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+  font-size: 0.65rem;
+}
+.inpta-testimonial-card__income dd {
+  margin: 0.25rem 0 0;
+  font-weight: 600;
+  color: var(--fg);
+  opacity: 0.75;
+}
+.inpta-testimonial-card__income dd.is-current {
+  color: var(--green);
+  opacity: 1;
+}
+.inpta-testimonial-card__person {
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border-top: 1px solid var(--border);
+  padding-top: 1.25rem;
+}
+.inpta-testimonial-card__person img {
+  width: 48px;
+  height: 48px;
+  border-radius: 999px;
+  object-fit: cover;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 2px #fff;
+}
+.inpta-testimonial-card__person h5 {
+  font-size: 0.92rem;
+  font-weight: 700;
+  margin-bottom: 0.1rem;
+}
+.inpta-testimonial-card__person p {
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin: 0;
+}
+.inpta-section__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 1rem;
+  font-weight: 700;
+  font-size: 0.92rem;
+  color: var(--blue);
+}
+
+/* Ecosystem pillar cards */
+.inpta-pillar-grid {
+  display: grid;
+  gap: 1.25rem;
+}
+@media (min-width: 640px) {
+  .inpta-pillar-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .inpta-pillar-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .inpta-pillar-grid > :last-child {
+    grid-column: span 2;
+  }
+}
+.inpta-pillar-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  padding: 1.75rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+.inpta-pillar-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card);
+  border-color: oklch(47% 0.19 260 / 0.3);
+}
+.inpta-pillar-card__icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 1rem;
+  background: var(--blue-soft);
+  color: var(--blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+.inpta-pillar-card__num {
+  margin-top: 1.25rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+}
+.inpta-pillar-card h3 {
+  margin-top: 0.2rem;
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+.inpta-pillar-card p {
+  margin-top: 0.4rem;
+  font-size: 0.92rem;
+  color: var(--muted);
+  margin-bottom: 0;
+}
+
+/* Core commitments — vertical row list */
+.inpta-commitment-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.inpta-commitment-row {
+  display: flex;
+  gap: 1rem;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+  padding: 1.25rem;
+}
+.inpta-commitment-row__icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 0.75rem;
+  background: var(--orange-soft);
+  color: var(--orange-hover);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.inpta-commitment-row h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+.inpta-commitment-row p {
+  font-size: 0.92rem;
+  color: var(--muted);
+  margin: 0;
+}
+.inpta-big-kicker {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  margin-bottom: 0.6rem;
+}
+.inpta-big-kicker__num {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--orange-hover);
+}
+.inpta-section__subhead {
+  font-weight: 700;
+  font-size: 1.15rem;
+}
+
+/* Research cards */
+.inpta-research-grid {
+  display: grid;
+  gap: 1.25rem;
+}
+@media (min-width: 768px) {
+  .inpta-research-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .inpta-research-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.inpta-research-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  padding: 1.75rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.inpta-research-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card);
+}
+.inpta-research-card__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.inpta-research-card__icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 1rem;
+  background: var(--blue-soft);
+  color: var(--blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+.inpta-research-card__area {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+}
+.inpta-research-card h3 {
+  margin-top: 1.25rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.inpta-research-card__tags {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.inpta-research-card__tags span {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: 999px;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* Credential grid */
+.inpta-vault-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.1rem 1.5rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+  border-bottom: none;
+}
+.inpta-vault-head h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.15rem;
+}
+.inpta-vault-head p {
+  color: var(--muted);
+  font-size: 0.85rem;
+  margin-bottom: 0;
+}
+.inpta-vault-badge {
+  background: var(--blue-soft);
+  color: var(--blue-deep);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+.inpta-credential-grid {
+  display: grid;
+  border: 1px solid var(--border);
+  border-radius: 0 0 var(--radius-md) var(--radius-md);
+  overflow: hidden;
+  background: #fff;
+}
+@media (min-width: 640px) {
+  .inpta-credential-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.inpta-credential-cell {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+@media (min-width: 640px) {
+  .inpta-credential-cell:nth-child(odd) {
+    border-right: 1px solid var(--border);
+  }
+}
+.inpta-credential-cell__icon {
+  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.6rem;
+  background: var(--blue-soft);
+  color: var(--blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  margin-top: 0.1rem;
+}
+.inpta-credential-cell__body {
+  flex: 1;
+  min-width: 0;
+}
+.inpta-credential-cell__label {
+  font-weight: 700;
+  font-size: 0.92rem;
+}
+.inpta-credential-cell__value {
+  margin-top: 0.3rem;
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--muted);
+}
+.inpta-credential-badge {
+  flex-shrink: 0;
+  margin-left: auto;
+  border-radius: 999px;
+  padding: 0.2rem 0.65rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.inpta-credential-badge--required {
+  background: var(--orange-soft);
+  color: var(--orange-hover);
+}
+.inpta-credential-badge--optional {
+  background: var(--blue-soft);
+  color: var(--blue-deep);
+}
+.inpta-vault-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+.inpta-note {
+  color: var(--muted);
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+/* Foundation / about bullet list */
+.inpta-bullet-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.6rem 1.5rem;
+}
+.inpta-bullet-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+.inpta-bullet-list li i {
+  color: var(--blue);
+  margin-top: 0.25rem;
+  font-size: 0.85rem;
+}
+.inpta-asset-frame {
+  position: relative;
+}
+
+/* Transparency cards */
+.inpta-step-grid {
+  display: grid;
+  gap: 1.25rem;
+}
+@media (min-width: 640px) {
+  .inpta-step-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 1024px) {
+  .inpta-step-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.inpta-step-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  padding: 1.5rem;
+  height: 100%;
+}
+.inpta-step-card__icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 1rem;
+  background: var(--blue-soft);
+  color: var(--blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+}
+.inpta-step-card h4 {
+  margin-top: 1.25rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+.inpta-step-card p {
+  margin-top: 0.5rem;
+  flex: 1;
+  font-size: 0.9rem;
+  color: var(--muted);
+}
+.inpta-step-card a {
+  margin-top: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: var(--blue);
+}
+
+/* Network pathway cards */
+.inpta-pathway-grid {
+  display: grid;
+  gap: 1.25rem;
+}
+@media (min-width: 768px) {
+  .inpta-pathway-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.inpta-pathway-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  padding: 1.75rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.inpta-pathway-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-card);
+}
+.inpta-pathway-card__icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  background: var(--blue-soft);
+  color: var(--blue);
+}
+.inpta-pathway-card.inpta-tone-orange .inpta-pathway-card__icon {
+  background: var(--orange-soft);
+  color: var(--orange-hover);
+}
+.inpta-pathway-card.inpta-tone-green .inpta-pathway-card__icon {
+  background: var(--green-soft);
+  color: var(--green-hover);
+}
+.inpta-pathway-card h3 {
+  margin-top: 1.25rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+.inpta-pathway-card p {
+  margin-top: 0.4rem;
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+.inpta-pathway-card__link {
+  margin-top: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--blue);
+}
+.inpta-pathway-card.inpta-tone-orange .inpta-pathway-card__link {
+  color: var(--orange-hover);
+}
+.inpta-pathway-card.inpta-tone-green .inpta-pathway-card__link {
+  color: var(--green-hover);
+}
+
+@media (max-width: 767px) {
+  .inpta-bullet-list {
+    grid-template-columns: 1fr;
+  }
+  .inpta-credential-cell:nth-child(odd) {
+    border-right: none;
+  }
+}
