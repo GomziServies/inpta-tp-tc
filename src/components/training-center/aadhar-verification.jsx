@@ -11,9 +11,9 @@ function TCAadharVerification({ setCheckData }) {
     pan_card: "",
   });
   const [imagePreviews, setImagePreviews] = useState({
-    adhar1: process.env.PUBLIC_URL + "images/documents/aadhaar-card-front.webp",
-    adhar2: process.env.PUBLIC_URL + "images/documents/aadhaar-card-back.webp",
-    pan_card: process.env.PUBLIC_URL + "/images/documents/pan-card.webp",
+    adhar1: "/images/documents/aadhaar-card-front.webp",
+    adhar2: "/images/documents/aadhaar-card-back.webp",
+    pan_card: "/images/documents/pan-card.webp",
     selectedImg1: false,
     selectedImg2: false,
   });

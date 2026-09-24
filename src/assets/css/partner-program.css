@@ -530,3 +530,249 @@
     font-size: 26px;
   }
 }
+
+/* Home Page Component Styles matching Partner & Center Program Design */
+.tp-offering-bar {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e2e8f0;
+  padding: 16px 20px;
+  margin-top: -40px;
+  position: relative;
+  z-index: 10;
+}
+
+.tp-offering-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 14px;
+  border-radius: 10px;
+  transition: all 0.25s ease;
+  font-weight: 600;
+  font-size: 14px;
+  color: #1e293b;
+  text-decoration: none;
+}
+
+.tp-offering-item:hover {
+  background: #f1f5f9;
+  transform: translateY(-2px);
+}
+
+.tp-offering-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: #eff6ff;
+  color: #1e4680;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.tp-stat-box {
+  background: #ffffff;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  padding: 24px 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  height: 100%;
+}
+
+.tp-stat-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 24px -4px rgba(0, 0, 0, 0.08);
+  border-color: #cbd5e1;
+}
+
+.tp-pathway-box {
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid #e2e8f0;
+  padding: 32px 26px;
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.tp-pathway-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+}
+
+.tp-pathway-box.tone-blue::before {
+  background: linear-gradient(90deg, #1e4680, #3b82f6);
+}
+
+.tp-pathway-box.tone-orange::before {
+  background: linear-gradient(90deg, #f4922f, #fb923c);
+}
+
+.tp-pathway-box.tone-green::before {
+  background: linear-gradient(90deg, #16a34a, #22c55e);
+}
+
+.tp-pathway-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.08);
+}
+
+.tp-badge-tag {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 50px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Review Carousel Styles */
+.review-carousel-wrapper {
+  position: relative;
+  padding: 10px 0 35px;
+}
+
+.review-carousel-wrapper .slick-track {
+  display: flex !important;
+  transition-timing-function: linear !important;
+}
+
+.review-carousel-wrapper .slick-prev,
+.review-carousel-wrapper .slick-next,
+.review-carousel-wrapper .custom-slider-arrow {
+  display: none !important;
+}
+
+.review-carousel-wrapper .slick-slide {
+  height: inherit !important;
+  display: flex !important;
+}
+
+.review-carousel-wrapper .slick-slide > div {
+  width: 100%;
+  display: flex;
+}
+
+.review-carousel-wrapper .slick-dots {
+  bottom: -15px;
+}
+
+.review-carousel-wrapper .slick-dots li button:before {
+  font-size: 11px;
+  color: #1e4680;
+  opacity: 0.3;
+}
+
+.review-carousel-wrapper .slick-dots li.slick-active button:before {
+  color: #f4922f;
+  opacity: 1;
+}
+
+/* Custom Slider Arrow Buttons matching screenshot */
+.custom-slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.custom-slider-arrow .arrow-inner-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #1e4680;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  transition: all 0.3s ease;
+}
+
+.custom-slider-arrow:hover {
+  transform: translateY(-50%) scale(1.08);
+  box-shadow: 0 6px 22px rgba(30, 70, 128, 0.22);
+  border-color: #cbd5e1;
+}
+
+.custom-slider-arrow:hover .arrow-inner-circle {
+  background: #f4922f;
+  transform: scale(1.05);
+}
+
+.custom-slider-prev {
+  left: -22px;
+}
+
+.custom-slider-next {
+  right: -22px;
+}
+
+@media (max-width: 991px) {
+  .custom-slider-prev {
+    left: -10px;
+  }
+  .custom-slider-next {
+    right: -10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .custom-slider-arrow {
+    display: none !important;
+  }
+}
+
+/* Glass Effect Button matching screenshot */
+.tp-btn-glass {
+  background: rgba(255, 255, 255, 0.12) !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.38) !important;
+  color: #ffffff !important;
+  border-radius: 50px !important;
+  font-weight: 700 !important;
+  transition: all 0.3s ease !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-decoration: none !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 12px 28px !important;
+}
+
+.tp-btn-glass:hover {
+  background: rgba(255, 255, 255, 0.22) !important;
+  border-color: rgba(255, 255, 255, 0.65) !important;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.22);
+}
+
+
