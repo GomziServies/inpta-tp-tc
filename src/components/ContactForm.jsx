@@ -244,7 +244,7 @@ function ContactPage() {
             href="/"
           >
             <img
-              src="images/inpta-logo.webp"
+              src="/images/inpta-logo.webp"
               className="logo"
               alt="logo"
               width="40%"
@@ -298,7 +298,7 @@ function ContactPage() {
             href="/"
           >
             <img
-              src="images/inpta-logo.webp"
+              src="/images/inpta-logo.webp"
               className="logo"
               alt="logo"
               width="40%"
